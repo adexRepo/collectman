@@ -8,6 +8,7 @@ class CollectaApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
