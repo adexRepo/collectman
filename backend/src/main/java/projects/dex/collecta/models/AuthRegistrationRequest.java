@@ -1,14 +1,11 @@
-package projects.dex.collecta.models.input;
-
-import java.io.Serializable;
+package projects.dex.collecta.models;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.ToString;
 
 @Getter @AllArgsConstructor @EqualsAndHashCode
-public class RegistrationRequest {
+public class AuthRegistrationRequest  {
     
     private final String firstName;
     private final String lastName;
