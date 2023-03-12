@@ -6,7 +6,8 @@ public class AuthServiceImpl implements AuthService  {
 
     @Override
     public boolean registration(AuthRegistrationRequest auth) {
-        throw new UnsupportedOperationException("Unimplemented method 'registration'");
+        
+        return true;
     }
 
     @Override
