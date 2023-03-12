@@ -1,6 +1,5 @@
 package projects.dex.collecta.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +12,6 @@ import projects.dex.collecta.services.AuthServiceImpl;
 @RequestMapping(path="api/v1")
 public class AuthController {
 
-    @Autowired
     AuthServiceImpl AuthServiceImpl;
     
     @PostMapping(path="registration")
