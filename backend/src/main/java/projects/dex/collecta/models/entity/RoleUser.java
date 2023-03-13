@@ -1,4 +1,4 @@
-package projects.dex.collecta.jpa.entities;
+package projects.dex.collecta.models.entity;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import projects.dex.collecta.commons.entity.BaseEntity;
+import projects.dex.collecta.common.entity.BaseEntity;
 
 @Data
 @NoArgsConstructor
@@ -23,14 +23,8 @@ public class RoleUser extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private Long id;
-    @Column(name = "level")
-    private Long level;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "description")
-    private String description;
+    @Id @GeneratedValue @Column (name = "id"          ) private Long   id         ;
+    @Column                     (name = "level"       ) private Long   level      ;
+    @Column                     (name = "name"        ) private String name       ;
+    @Column                     (name = "description" ) private String description;
 }
