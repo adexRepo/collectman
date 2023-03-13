@@ -1,4 +1,4 @@
-package projects.dex.collecta.commons.annotation;
+package projects.dex.collecta.common.annotation;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;

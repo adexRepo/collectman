@@ -1,4 +1,4 @@
-package projects.dex.collecta.commons.entity;
+package projects.dex.collecta.common.entity;
 
 import java.time.ZonedDateTime;
 
