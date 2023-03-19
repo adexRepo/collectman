@@ -1,12 +1,16 @@
-package projects.dex.collecta.models.dto;
+package projects.dex.collecta.models;
 
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter @AllArgsConstructor @EqualsAndHashCode
-public class UserDto  {
-    
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class RegistRequest {
+
     private String     firstName   ;
     private String     lastName    ;
     private String     full_name   ;
@@ -15,10 +19,5 @@ public class UserDto  {
     private String     email       ;
     private String     ipAddr      ;
     private String     password    ;
-
-
-    public ImmutableUserDto toImmutable() {
-        return new ImmutableUserDto(this);
-    }
+    
 }
-

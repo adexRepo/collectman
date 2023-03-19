@@ -1,8 +1,14 @@
 package projects.dex.collecta.services;
 
-import projects.dex.collecta.models.dto.UserDto;
+import org.springframework.stereotype.Service;
 
+import projects.dex.collecta.models.AuthRequest;
+import projects.dex.collecta.models.AuthResponse;
+import projects.dex.collecta.models.RegistRequest;
+
+@Service
 public interface AuthService {
     
-    UserDto registration(UserDto auth);
+    AuthResponse registration(RegistRequest registRequest);
+    AuthResponse authenticate(AuthRequest authRequest);
 }
