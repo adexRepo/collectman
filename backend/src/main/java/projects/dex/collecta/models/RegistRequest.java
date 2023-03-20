@@ -13,7 +13,7 @@ public class RegistRequest {
 
     private String     firstName   ;
     private String     lastName    ;
-    private String     full_name   ;
+    private String     fullName    ;
     private String     username    ;
     private Long       telNo       ;
     private String     email       ;

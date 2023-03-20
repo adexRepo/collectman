@@ -10,23 +10,23 @@ import lombok.RequiredArgsConstructor;
 import projects.dex.collecta.models.AuthRequest;
 import projects.dex.collecta.models.AuthResponse;
 import projects.dex.collecta.models.RegistRequest;
-import projects.dex.collecta.services.AuthService;
+import projects.dex.collecta.services.impl.AuthServiceImpl;
 
 @RestController
 @RequestMapping(path = "api/v1/auth")
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final AuthService authService;
+    private final AuthServiceImpl authServiceImpl;
 
     @PostMapping(path = "/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegistRequest request) {
-        return ResponseEntity.ok(authService.registration(request));
+        return ResponseEntity.ok(authServiceImpl.registration(request));
     }
 
     @PostMapping(path = "/authenticate")
     public ResponseEntity<AuthResponse> authenticate(@RequestBody AuthRequest req) {
-        return ResponseEntity.ok(authService.authenticate(req));
+        return ResponseEntity.ok(authServiceImpl.authenticate(req));
 
     }
 

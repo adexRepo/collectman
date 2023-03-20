@@ -14,12 +14,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import projects.dex.collecta.common.entity.BaseEntity;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
@@ -70,4 +72,5 @@ public class UserBase extends BaseEntity implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }
