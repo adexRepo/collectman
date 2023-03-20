@@ -6,20 +6,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import projects.dex.collecta.models.dto.UserDto;
+import lombok.RequiredArgsConstructor;
+import projects.dex.collecta.models.AuthRequest;
+import projects.dex.collecta.models.AuthResponse;
+import projects.dex.collecta.models.RegistRequest;
 import projects.dex.collecta.services.impl.AuthServiceImpl;
 
 @RestController
-@RequestMapping(path="api/v1")
+@RequestMapping(path = "api/v1/auth")
+@RequiredArgsConstructor
 public class AuthController {
 
-    AuthServiceImpl AuthServiceImpl;
-    
-    @PostMapping(path="/registration")
-    public ResponseEntity<UserDto> register(@RequestBody UserDto req)
-    {
-        UserDto userDto = AuthServiceImpl.registration(req);
-        return ResponseEntity.ok(userDto);
+    private final AuthServiceImpl authServiceImpl;
+
+    @PostMapping(path = "/register")
+    public ResponseEntity<AuthResponse> register(@RequestBody RegistRequest request) {
+        return ResponseEntity.ok(authServiceImpl.registration(request));
+    }
+
+    @PostMapping(path = "/authenticate")
+    public ResponseEntity<AuthResponse> authenticate(@RequestBody AuthRequest req) {
+        return ResponseEntity.ok(authServiceImpl.authenticate(req));
+
     }
 
 }
