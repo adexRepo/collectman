@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>projects-dex</groupId>
-	<artifactId>collecta</artifactId>
+	<artifactId>collectman</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>collecta</name>
+	<name>collectman</name>
 	<description>learn cloning project by my self</description>
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -60,6 +60,12 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>6.1.7.Final</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
